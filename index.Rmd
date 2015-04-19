@@ -1,0 +1,56 @@
+---
+title       : Word Prediction Based on Natural Language Processing
+subtitle    : 
+author      : Andras Pap 
+job         : Coursera Student for Data Science Specialization
+logo        : ALP_Logo4.png
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+## My Shiny App: Word Predictor
+
+It predicts the next word the user about to type in based on preceeding words and a statistical model that was trained on data sets from twitter and news blogs.
+You can find my useful Shiny data product at: https://andraspap.shinyapps.io/NLP-Demo-Project/ 
+The training data can be found at: https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip
+
+Give it a try!!
+
+--- .class #id 
+
+## Prediction Is Based on the "mtcars" Data Set
+The first 15 of the 32 cars in the data set:
+```{r echo=FALSE}
+data(mtcars)
+head(mtcars,15)
+```
+
+--- .class #id 
+
+## Clear Graphs Show the Result
+
+```{r echo=FALSE, cache=TRUE}
+lmBoth <- lm(mpg ~ disp + am + disp * am, mtcars)
+
+plot(mpg ~ disp,mtcars,col = (mtcars$am == 0)*2 + 2, main = "MPG v.s. Displacement", ylab = "mpg", xlab = "Displacement (cu in.)")
+abline(c(lmBoth$coef[1],lmBoth$coef[2]),col='blue')		
+abline(c(lmBoth$coef[1] + lmBoth$coef[3],lmBoth$coef[2] + lmBoth$coef[4]),col='red')
+legend("topright",lty = 1, seg.len = 2, xjust = 20, col=c("blue","red"),legend = c("automatic","manual"))
+```
+
+--- .class #id 
+
+## Thank You
+
+
+Thank You for listening to me!
+
+Check out my app: https://andraspap.shinyapps.io/NLP-Demo-Project/
+
+Download it from: https://github.com/andraspap/DevelopingDataProducts_ShinyApp
+
+
+
