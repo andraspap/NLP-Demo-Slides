@@ -39,7 +39,7 @@ Thank You for listening to me!
 
 Check out my app: https://andraspap.shinyapps.io/NLP-Demo-Project/
 
-Download it from: https://github.com/andraspap/DevelopingDataProducts_ShinyApp
+Download it from: https://github.com/andraspap/NLP-Demo-App
 
 
 
